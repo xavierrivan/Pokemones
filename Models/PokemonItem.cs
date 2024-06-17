@@ -8,7 +8,7 @@ namespace Pokemones.Models
 {
     public class PokemonItem
     {
-        public Stream name {  get; set; }
-        public url url { get; set; }
+        public String name { get; set; }
+        public string url { get; set; }
     }
 }

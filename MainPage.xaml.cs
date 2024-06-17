@@ -9,14 +9,15 @@ namespace Pokemones
         public MainPage()
         {
             InitializeComponent();
+            CargarData();
         }
 
-        public void CardarData()
+        public async void CargarData()
         {
-            PokemonServices poke_Services = PokemonServices();
-            var listado_pokemones = poke_Services.DevuelveListadoPokemones();
+            PokemonServices poke_services = new PokemonServices();
+            var listado_pokemones = await poke_services.DevuelveListadoPokemones();
 
-            ListaPokemones.ItemsSource = listado_pokemones.Result;
+            ListaPokemones.ItemsSource = listado_pokemones;
         
         }
     }
